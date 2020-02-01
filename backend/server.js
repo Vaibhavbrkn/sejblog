@@ -21,9 +21,9 @@ const app = express()
 
 
 //database
-mongoose.connect(process.env.DATABASE,{useNewUrlParser:true , useCreateIndex:true , useFindAndModify:false}).
-then(()=>console.log('database connected'))
-
+mongoose.connect(process.env.DATABASE,{useNewUrlParser:true , useCreateIndex:true , useFindAndModify:false, useUnifiedTopology : true})
+.then(()=>console.log('database connected'))
+.catch(()=>console.error('database connection failed'));
 //middleware 
 app.use(morgan('dev'))
 app.use(bodyParser.json())

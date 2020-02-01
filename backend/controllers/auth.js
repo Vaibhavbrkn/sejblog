@@ -272,6 +272,7 @@ exports.preSignup = (req, res) => {
 
         sgMail.send(emailData).then(sent => {
             return res.json({
+                emailData : emailData,
                 message: `Email has been sent to ${email}. Follow the instructions to activate your account.`
             });
         });
