@@ -16,9 +16,11 @@ const CategoryTag = ()=>{
                             <h2>Manage Category and Tag</h2>
                         </div>
                         <div className = 'col-md-6'>
+                            Category
                            <Category/>
                         </div>
                         <div className = 'col-md-6'>
+                            Tag
                             <Tag/>
                         </div>
                     </div>

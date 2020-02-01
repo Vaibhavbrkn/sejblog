@@ -32,7 +32,7 @@ const SignAuth=()=>{
        // console.table({name , email , password , error,loading , message , showForm})
        setValues({...values , error:false , loading:true})
        const user = {name  , email , password}
-
+        console.log(user)
        preSignup(user)
        .then(response=>{
            if(response.error){
